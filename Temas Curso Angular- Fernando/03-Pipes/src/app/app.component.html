@@ -1,0 +1,52 @@
+<div class="container">
+
+    <h1 class="mt-3">Pipes <small>Angular</small></h1>
+    <hr>
+
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Variable</th>
+                        <th>Pipe</th>
+                        <th>Salida</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>{{nombre}}</td>
+                        <td>uppercase</td>
+                        <td>{{nombre | uppercase}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>{{nombre}}</td>
+                        <td>lowercase</td>
+                        <td>{{nombre | lowercase}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>{{nombre}}</td>
+                        <td>slice:3</td>
+                        <td>{{nombre | slice:0:3}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{arreglo}}</td>
+                        <td>slice:1:5</td>
+                        <td>{{arreglo | slice:1:5}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>{{PI}}</td>
+                        <td>number</td>
+                        <td>{{PI | number:'.0-2'}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
