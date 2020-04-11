@@ -1,0 +1,24 @@
+<ion-header no-border [translucent]="true">
+    <ion-toolbar color="dark">
+        <ion-title>
+            Pendientes
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" [fullscreen]="true">
+    <ion-list color="dark">
+        <ion-item color="dark" *ngFor="let list of listPendingTask" detail>
+            <ion-label>
+                {{list.title}}
+            </ion-label>
+        </ion-item>
+    </ion-list>
+
+    <!-- fab placed to the top end -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="addList()" color="tertiary">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>
