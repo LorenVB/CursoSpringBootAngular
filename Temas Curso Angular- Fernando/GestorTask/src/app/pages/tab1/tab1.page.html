@@ -7,13 +7,10 @@
 </ion-header>
 
 <ion-content color="dark" [fullscreen]="true">
-    <ion-list color="dark">
-        <ion-item color="dark" *ngFor="let list of listPendingTask" detail>
-            <ion-label>
-                {{list.title}}
-            </ion-label>
-        </ion-item>
-    </ion-list>
+
+    <app-lists [terminada]="false"></app-lists>
+
+
 
     <!-- fab placed to the top end -->
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">

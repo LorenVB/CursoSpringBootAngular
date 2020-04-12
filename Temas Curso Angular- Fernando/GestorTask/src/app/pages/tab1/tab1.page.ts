@@ -29,7 +29,7 @@ export class Tab1Page {
           name: 'titulo',
           type: 'text',
           placeholder: 'Nombre de la lista',
-        },
+        }
       ],
       buttons: [
         {
@@ -57,4 +57,6 @@ export class Tab1Page {
 
     alert.present();
   }
+
+ 
 }

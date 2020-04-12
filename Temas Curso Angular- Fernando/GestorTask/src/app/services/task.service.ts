@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
-import { List } from "../models/list.model";
+import { List } from '../models/list.model';
+import { ListItem } from '../models/list-item.model';
 
 @Injectable({
   providedIn: "root",
@@ -29,6 +30,15 @@ export class TaskService {
 
     return this.lists.find(listaData=> listaData.id===id)
 
+  }
+
+  public deleteList(id: string | number){
+    
+    id=Number(id);
+
+    this.lists=this.lists.filter(listNotDeleted=> listNotDeleted.id!==id);
+    
+    this.saveStorage();
   }
 
   public saveStorage() {

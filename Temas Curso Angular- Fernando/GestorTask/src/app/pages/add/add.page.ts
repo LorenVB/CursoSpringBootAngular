@@ -35,4 +35,25 @@ export class AddPage implements OnInit {
     this.nameItem = "";
     this.taskService.saveStorage();
   }
+
+  cambioCheck(item: ListItem) {
+    const pendientes = this.list.items.filter((itemData) => !itemData.completed)
+      .length;
+
+    if (pendientes === 0) {
+      this.list.terminatedIn = new Date();
+      this.list.terminated = true;
+    } else {
+      this.list.terminatedIn = null;
+      this.list.terminated = false;
+    }
+    this.taskService.saveStorage();
+
+    console.log(this.list);
+  }
+
+  delete (i:number){
+    this.list.items.splice(i,1);
+    this.taskService.saveStorage();
+  }
 }
